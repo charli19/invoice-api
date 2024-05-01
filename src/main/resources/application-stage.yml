@@ -2,3 +2,17 @@ server:
   port: 8085
   servlet:
     contextPath: /api
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        marosavatChannel:
+          destination: invoice.topic
+      default:
+        contentType: application/json
+  rabbitmq:
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
