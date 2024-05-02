@@ -1,16 +1,14 @@
 server:
   port: 8085
-  servlet:
-    contextPath: /api
 
 spring:
   cloud:
     gateway:
       routes:
         - id: company_route
-          uri: ${INVOICE_SERVICE_URL}/company-vats
+          uri: ${INVOICE_SERVICE_URL}/v1/company-vats
           predicates:
-            - Path=/company-vats/**
+            - Path=/v1/company-vats/**
   rabbitmq:
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
