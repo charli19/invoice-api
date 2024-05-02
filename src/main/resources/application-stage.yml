@@ -5,12 +5,12 @@ server:
 
 spring:
   cloud:
-    stream:
-      bindings:
-        marosavatChannel:
-          destination: invoice.topic
-      default:
-        contentType: application/json
+    gateway:
+      routes:
+        - id: company_route
+          uri: https://invoice-service.railway.internal/company-vats
+          predicates:
+            - Path=/company-vats/**
   rabbitmq:
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
