@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.marosavat</groupId>
-	<artifactId>invoiceapi</artifactId>
+	<artifactId>invoice-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>invoice-api</name>
 	<description>Marosa VAT invoice api</description>
