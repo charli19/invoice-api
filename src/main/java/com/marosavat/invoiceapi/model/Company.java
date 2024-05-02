@@ -2,8 +2,10 @@ package com.marosavat.invoiceapi.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Company {
+public class Company implements Serializable {
     private String name;
     private String vatNumber;
     private String street;

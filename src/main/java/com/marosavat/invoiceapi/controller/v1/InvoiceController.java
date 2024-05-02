@@ -1,6 +1,5 @@
 package com.marosavat.invoiceapi.controller.v1;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marosavat.invoiceapi.model.response.InvoiceResponse;
 import com.marosavat.invoiceapi.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
