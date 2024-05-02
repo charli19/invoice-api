@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         - id: company_route
-          uri: https://invoice-service.railway.internal/company-vats
+          uri: ${INVOICE_SERVICE_URL}/company-vats
           predicates:
             - Path=/company-vats/**
   rabbitmq:
